@@ -1,0 +1,7 @@
+
+[1] "algorithms.yaml" "datasets.yaml"  
+
+Loading ICR_val.tab_OGbed_NoDedup Dataset validated results
+  Loading panelcn results for ICR_val.tab_OGbed_NoDedup dataset
+  Generating summary file at /home/su/CNVbenchmarkeR/output/summary/summary-ICR_val.tab_OGbed_NoDedup.txt 
+  Generating CSV results file at /home/su/CNVbenchmarkeR/output/summary/results-ICR_val.tab_OGbed_NoDedup.csv 

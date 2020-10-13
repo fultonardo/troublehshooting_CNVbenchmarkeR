@@ -1,0 +1,21 @@
+# define which datasets will be evaluated in the benchmark 
+
+# This is an example of dataset definition:
+ICR_val.tab_OGbed_NoDedup:
+  include: true   # true to include this dataset in the analysis, false otherwise
+  bams_dir: "/home/su/EGA/ICR96/HG19_alignment/BAMsorted"   # folder where bams files (.bai indexes) are stored
+  bed_file: "/home/su/EGA/ICR96/11_og_ICR96_panel_HG19.bed"   # bed file defining ROIs. It must be sortered by chr and start position, and 4th column must contain only gene symbol. (See examples folder)
+  fasta_file: "/home/su/a.CNV_pipeline/hg19/hg19.fa"   # genome fasta file
+  validated_results_file: "/home/su/EGA/ICR96/11_MLPA_validation_tab.csv"    # file containing results obtained using a orthogonal method (MLPA or aCGH) (See examples folder)
+  validated_results_file_format: "icr"   # format of validated results file: icr or panelcn
+  read_length: 101   # read length used when sequencing
+ 
+ 
+dataset1:
+  include: false   # true to include this dataset in the analysis, false otherwise
+  bams_dir: "/home/su/a.CNV_pipeline/panelcn.MOPS/bams"   # folder where bams files (.bai indexes) are stored
+  bed_file: "/home/su/a.CNV_pipeline/panelcn.MOPS/bed/HCC_targets_v1_HG38.bed"   # bed file defining ROIs. It must be sortered by chr and start position, and 4th column must contain only gene symbol. (See examples folder)
+  fasta_file: "/home/su/a.CNV_pipeline/hg38/hg38.fa"   # genome fasta file
+  validated_results_file: "/home/su/CNVbenchmarkeR/examples/validatedResultsFileExample_Panelcn.csv"    # file containing results obtained using a orthogonal method (MLPA or aCGH) (See examples folder)
+  validated_results_file_format: "panelcn"   # format of validated results file: icr or panelcn
+  read_length: 150   # read length used when sequencing
