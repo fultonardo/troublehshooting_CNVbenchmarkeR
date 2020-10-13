@@ -1,0 +1,10 @@
+
+[1] "algorithms.yaml" "datasets.yaml"  
+
+Loading DECoN_bedw_CHROM._valid-tab.csv Dataset validated results
+  Loading decon results for DECoN_bedw_CHROM._valid-tab.csv dataset
+Error in `$<-.data.frame`(`*tmp*`, alg, value = NA) : 
+  replacement has 1 row, data has 0
+Calls: <Anonymous> -> <Anonymous> -> $<- -> $<-.data.frame
+In addition: There were 50 or more warnings (use warnings() to see the first 50)
+Execution halted

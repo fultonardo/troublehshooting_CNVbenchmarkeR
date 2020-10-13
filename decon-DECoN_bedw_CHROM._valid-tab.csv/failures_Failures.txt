@@ -1,0 +1,34 @@
+Sample	Exon	Type	Gene	Info
+17323m	All	Whole sample	All	Low correlation: 0.968268379557049
+17339m	All	Whole sample	All	Low correlation: 0.874310035312338
+17342m	All	Whole sample	All	Low correlation: 0.977572682683981
+17383m	All	Whole sample	All	Low correlation: 0.96852593623388
+17394m	All	Whole sample	All	Low correlation: 0.963430752063132
+All	421	Whole exon	NSD1	Low median read depth (FPKM): 0
+All	448	Whole exon	rs4324798	Low median read depth (FPKM): 0
+All	449	Whole exon	rs29232	Low median read depth (FPKM): 3
+All	450	Whole exon	rs3129055	Low median read depth (FPKM): 0
+All	451	Whole exon	rs2860580	Low median read depth (FPKM): 1
+All	452	Whole exon	rs2517713	Low median read depth (FPKM): 2
+All	453	Whole exon	rs6457327	Low median read depth (FPKM): 0
+All	454	Whole exon	CCHCR1	Low median read depth (FPKM): 4
+All	455	Whole exon	rs2894207	Low median read depth (FPKM): 0
+All	456	Whole exon	rs2596542	Low median read depth (FPKM): 0
+All	457	Whole exon	rs2248462	Low median read depth (FPKM): 0
+All	458	Whole exon	APOM	Low median read depth (FPKM): 0
+All	459	Whole exon	rs204999	Low median read depth (FPKM): 0
+All	460	Whole exon	rs9268542	Low median read depth (FPKM): 0
+All	461	Whole exon	HLA-DRB9	Low median read depth (FPKM): 0
+All	462	Whole exon	HLA-DRB9	Low median read depth (FPKM): 1
+All	463	Whole exon	rs2858870	Low median read depth (FPKM): 4
+All	464	Whole exon	rs674313	Low median read depth (FPKM): 8
+All	465	Whole exon	rs28421666	Low median read depth (FPKM): 2
+All	466	Whole exon	rs2647012	Low median read depth (FPKM): 0
+All	467	Whole exon	rs10484561	Low median read depth (FPKM): 0
+All	468	Whole exon	rs9275572	Low median read depth (FPKM): 0
+All	810	Whole exon	TIMM23B	Low median read depth (FPKM): 82
+All	1622	Whole exon	RHBDF2	Low median read depth (FPKM): 51
+All	1657	Whole exon	rs8102476	Low median read depth (FPKM): 36
+All	1750	Whole exon	FANCB	Low median read depth (FPKM): 0
+All	1773	Whole exon	rs6603251	Low median read depth (FPKM): 0
+All	1774	Whole exon	AMELY	Low median read depth (FPKM): 1

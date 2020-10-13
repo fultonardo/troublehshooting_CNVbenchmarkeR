@@ -1,0 +1,4085 @@
+[1] "Starting at 2020-10-13 07:21:59"
+[1] "./algorithms/decon/deconParams.yaml" "datasets.yaml"                      
+[1] "Params for this execution: list(deconFolder = \"/home/cnv18/DECoN\", mincorr = 0.98, mincov = 100, transProb = 0.01)"
+[1] "/home/cnv18/DECoN"
+[1] "Starting DECoN for DECoN_bedw_CHROM._valid-tab.csv dataset"
+[1] "Rscript ReadInBams.R --bams /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup --bed /home/cnv18/Desktop/BI/NGSData/ICR96/11_ICR96_panel_HG19_wCHROMOSOMES.bed --fasta /home/cnv18/Desktop/BI/NGSData/hg19/hg19.fa --out /home/cnv18/CNVbenchmarkeR/output/decon-DECoN_bedw_CHROM._valid-tab.csv/output.bams"
+[1] "BEGIN ReadInBams.R"
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.7.0 (2015-02-19) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.19.0 (2015-02-27) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, gc, load, save
+
+R.utils v2.0.2 (2015-04-27) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, parse, warnings
+
+
+Attaching package: ‘methods’
+
+The following objects are masked from ‘package:R.oo’:
+
+    getClasses, getMethods
+
+[1] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup"
+Reference fasta file provided so ExomeDepth will compute the GC content in each window
+Parse 95 BAM files
+ [1] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17296m.bam"
+ [2] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17297m.bam"
+ [3] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17298m.bam"
+ [4] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17299m.bam"
+ [5] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17300m.bam"
+ [6] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17301m.bam"
+ [7] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17302m.bam"
+ [8] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17303m.bam"
+ [9] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17304m.bam"
+[10] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17305m.bam"
+[11] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17306m.bam"
+[12] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17307m.bam"
+[13] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17308m.bam"
+[14] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17309m.bam"
+[15] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17310m.bam"
+[16] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17311m.bam"
+[17] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17312m.bam"
+[18] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17313m.bam"
+[19] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17314m.bam"
+[20] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17315m.bam"
+[21] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17316m.bam"
+[22] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17317m.bam"
+[23] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17318m.bam"
+[24] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17319m.bam"
+[25] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17320m.bam"
+[26] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17321m.bam"
+[27] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17322m.bam"
+[28] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17323m.bam"
+[29] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17324m.bam"
+[30] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17325m.bam"
+[31] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17326m.bam"
+[32] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17327m.bam"
+[33] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17328m.bam"
+[34] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17329m.bam"
+[35] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17330m.bam"
+[36] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17331m.bam"
+[37] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17332m.bam"
+[38] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17333m.bam"
+[39] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17334m.bam"
+[40] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17335m.bam"
+[41] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17336m.bam"
+[42] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17337m.bam"
+[43] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17338m.bam"
+[44] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17339m.bam"
+[45] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17340m.bam"
+[46] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17341m.bam"
+[47] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17342m.bam"
+[48] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17343m.bam"
+[49] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17356m.bam"
+[50] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17357m.bam"
+[51] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17358m.bam"
+[52] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17359m.bam"
+[53] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17360m.bam"
+[54] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17361m.bam"
+[55] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17362m.bam"
+[56] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17364m.bam"
+[57] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17365m.bam"
+[58] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17366m.bam"
+[59] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17367m.bam"
+[60] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17368m.bam"
+[61] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17369m.bam"
+[62] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17370m.bam"
+[63] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17371m.bam"
+[64] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17372m.bam"
+[65] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17373m.bam"
+[66] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17374m.bam"
+[67] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17375m.bam"
+[68] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17376m.bam"
+[69] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17377m.bam"
+[70] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17378m.bam"
+[71] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17379m.bam"
+[72] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17380m.bam"
+[73] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17381m.bam"
+[74] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17382m.bam"
+[75] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17383m.bam"
+[76] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17384m.bam"
+[77] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17385m.bam"
+[78] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17386m.bam"
+[79] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17387m.bam"
+[80] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17388m.bam"
+[81] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17389m.bam"
+[82] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17390m.bam"
+[83] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17391m.bam"
+[84] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17392m.bam"
+[85] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17393m.bam"
+[86] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17394m.bam"
+[87] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17395m.bam"
+[88] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17396m.bam"
+[89] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17397m.bam"
+[90] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17398m.bam"
+[91] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17399m.bam"
+[92] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17400m.bam"
+[93] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17401m.bam"
+[94] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17402m.bam"
+[95] "/home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17403m.bam"
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17296m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1322974
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17297m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1180147
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17298m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 835123
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17299m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1251288
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17300m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1285741
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17301m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1786689
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17302m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1021371
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17303m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1539081
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17304m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1373893
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17305m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1552142
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17306m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1391377
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17307m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1182564
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17308m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1769029
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17309m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1756176
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17310m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1458531
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17311m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1804551
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17312m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1368258
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17313m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1561643
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17314m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1362000
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17315m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1512927
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17316m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1558412
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17317m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1642112
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17318m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1745127
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17319m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1780990
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17320m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1719581
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17321m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1800746
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17322m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1675848
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17323m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 457909
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17324m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1466906
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17325m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1871640
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17326m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1855687
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17327m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2047691
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17328m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1594981
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17329m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1830715
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17330m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1731414
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17331m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1764223
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17332m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1941315
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17333m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2562607
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17334m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2084393
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17335m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1979172
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17336m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1434644
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17337m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1641369
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17338m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1713827
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17339m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1752099
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17340m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1247860
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17341m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1731640
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17342m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 575930
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17343m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1810664
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17356m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2518569
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17357m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2248838
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17358m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2218084
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17359m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2005904
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17360m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2020100
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17361m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2343634
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17362m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2040663
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17364m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2131998
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17365m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1921344
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17366m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1766339
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17367m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1751543
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17368m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1703158
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17369m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1964208
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17370m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1820305
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17371m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2334211
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17372m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1743743
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17373m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1590309
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17374m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1358303
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17375m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1667115
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17376m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1686342
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17377m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1833622
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17378m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1874548
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17379m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1795165
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17380m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1682640
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17381m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1104215
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17382m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1675678
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17383m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1750487
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17384m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1561522
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17385m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1951579
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17386m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1746455
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17387m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2313538
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17388m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1802468
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17389m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1713219
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17390m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1604609
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17391m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1534070
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17392m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1761606
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17393m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1737567
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17394m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1399412
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17395m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 2203798
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17396m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1758587
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17397m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1649748
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17398m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1318751
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17399m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1353321
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17400m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1439330
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17401m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1458994
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17402m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1578749
+Now parsing /home/cnv18/Desktop/BI/NGSData/ICR96/ICR96dedup/dedup/17403m.bam
+Parsing chromosome chr1
+Parsing chromosome chr2
+Parsing chromosome chr3
+Parsing chromosome chr4
+Parsing chromosome chr5
+Parsing chromosome chr6
+Parsing chromosome chr7
+Parsing chromosome chr8
+Parsing chromosome chr9
+Parsing chromosome chr10
+Parsing chromosome chr11
+Parsing chromosome chr12
+Parsing chromosome chr13
+Parsing chromosome chr14
+Parsing chromosome chr15
+Parsing chromosome chr16
+Parsing chromosome chr17
+Parsing chromosome chr18
+Parsing chromosome chr19
+Parsing chromosome chr20
+Parsing chromosome chr21
+Parsing chromosome chr22
+Parsing chromosome chrX
+Parsing chromosome chrY
+Number of counted fragments : 1870006
+[1] "END ReadInBams.R"
+[1] "ReadInBams.R finished"
+[1] "Rscript IdentifyFailures.R --Rdata /home/cnv18/CNVbenchmarkeR/output/decon-DECoN_bedw_CHROM._valid-tab.csv/output.bams.RData --mincorr 0.98 --mincov 100 --out /home/cnv18/CNVbenchmarkeR/output/decon-DECoN_bedw_CHROM._valid-tab.csv/failures"
+[1] "BEGIN IdentifyFailures.R"
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.7.0 (2015-02-19) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.19.0 (2015-02-27) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, gc, load, save
+
+R.utils v2.0.2 (2015-04-27) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, parse, warnings
+
+
+Attaching package: ‘methods’
+
+The following objects are masked from ‘package:R.oo’:
+
+    getClasses, getMethods
+
+[1] "END IdentifyFailures.R"
+[1] "IdentifyFailures.R finished"
+[1] "Rscript makeCNVcalls.R --Rdata /home/cnv18/CNVbenchmarkeR/output/decon-DECoN_bedw_CHROM._valid-tab.csv/output.bams.RData --transProb 0.01 --out /home/cnv18/CNVbenchmarkeR/output/decon-DECoN_bedw_CHROM._valid-tab.csv/calls"
+Loading required package: R.oo
+Loading required package: R.methodsS3
+R.methodsS3 v1.7.0 (2015-02-19) successfully loaded. See ?R.methodsS3 for help.
+R.oo v1.19.0 (2015-02-27) successfully loaded. See ?R.oo for help.
+
+Attaching package: ‘R.oo’
+
+The following objects are masked from ‘package:base’:
+
+    attach, detach, gc, load, save
+
+R.utils v2.0.2 (2015-04-27) successfully loaded. See ?R.utils for help.
+
+Attaching package: ‘R.utils’
+
+The following object is masked from ‘package:utils’:
+
+    timestamp
+
+The following objects are masked from ‘package:base’:
+
+    cat, commandArgs, getOption, inherits, isOpen, parse, warnings
+
+[1] "BEGIN makeCNVCalls.R"
+
+Attaching package: ‘methods’
+
+The following objects are masked from ‘package:R.oo’:
+
+    getClasses, getMethods
+
+[1] "Processing sample: 17296m 1/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99606
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 2
+Number of calls for chromosome chr2 : 2
+Number of calls for chromosome chr3 : 3
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr14 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr16 : 3
+Number of calls for chromosome chr17 : 2
+Number of calls for chromosome chr19 : 3
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17297m 2/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99663
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chrX : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17298m 3/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99725
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 1
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17299m 4/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99727
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+[1] "Processing sample: 17300m 5/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99789
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chrX : 4
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17301m 6/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99764
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 3
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 3
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 4
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17302m 7/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99773
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr3 : 3
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 3
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 2
+Number of calls for chromosome chr17 : 2
+[1] "Processing sample: 17303m 8/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9944
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 2
+Number of calls for chromosome chr2 : 3
+Number of calls for chromosome chr3 : 3
+Number of calls for chromosome chr6 : 6
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 3
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr19 : 4
+Number of calls for chromosome chr22 : 1
+Number of calls for chromosome chrX : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17304m 9/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99879
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 3
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17305m 10/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99855
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 2
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17306m 11/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99894
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr4 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17307m 12/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99856
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17308m 13/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99938
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17309m 14/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99932
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17310m 15/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99927
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 2
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17311m 16/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.999
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr15 : 2
+Number of calls for chromosome chr16 : 2
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17312m 17/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99892
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17313m 18/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99922
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr14 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17314m 19/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99886
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr4 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr11 : 2
+Number of calls for chromosome chr13 : 1
+[1] "Processing sample: 17315m 20/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99863
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 4
+[1] "Processing sample: 17316m 21/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99896
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17317m 22/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9992
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17318m 23/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99468
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 6
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17319m 24/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99915
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr13 : 1
+[1] "Processing sample: 17320m 25/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9989
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 3
+Number of calls for chromosome chr6 : 6
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17321m 26/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99915
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chrX : 1
+[1] "Processing sample: 17322m 27/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99565
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr13 : 1
+[1] "Processing sample: 17323m 28/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.95401
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chrX : 2
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17324m 29/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99584
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 2
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr19 : 1
+[1] "Processing sample: 17325m 30/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99669
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chrX : 2
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17326m 31/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99905
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17327m 32/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99919
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17328m 33/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99906
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17329m 34/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99913
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr12 : 1
+[1] "Processing sample: 17330m 35/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99913
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17331m 36/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99902
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17332m 37/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99875
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr22 : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17333m 38/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99873
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr19 : 1
+[1] "Processing sample: 17334m 39/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99924
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17335m 40/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99415
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 2
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17336m 41/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99891
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 1
+[1] "Processing sample: 17337m 42/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9986
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr19 : 1
+[1] "Processing sample: 17338m 43/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99834
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17339m 44/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.87431
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr17 : 2
+[1] "Processing sample: 17340m 45/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9966
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 2
+Number of calls for chromosome chr7 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr17 : 2
+Number of calls for chromosome chr19 : 1
+[1] "Processing sample: 17341m 46/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99661
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chrX : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17342m 47/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.97882
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 3
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17343m 48/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.999
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr19 : 1
+[1] "Processing sample: 17356m 49/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9957
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 2
+Number of calls for chromosome chr3 : 4
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 3
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 3
+Number of calls for chromosome chr11 : 2
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 2
+Number of calls for chromosome chr16 : 3
+Number of calls for chromosome chr17 : 3
+Number of calls for chromosome chr19 : 4
+Number of calls for chromosome chrX : 1
+[1] "Processing sample: 17357m 50/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9984
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 6
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 3
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 2
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr16 : 2
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17358m 51/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.98773
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chrX : 2
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17359m 52/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99834
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 2
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr15 : 2
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17360m 53/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99851
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 2
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 2
+Number of calls for chromosome chr12 : 2
+Number of calls for chromosome chr13 : 2
+Number of calls for chromosome chr15 : 2
+Number of calls for chromosome chr16 : 2
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17361m 54/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99837
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 2
+Number of calls for chromosome chr2 : 2
+Number of calls for chromosome chr3 : 3
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 3
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17362m 55/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99439
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 3
+Number of calls for chromosome chr3 : 3
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 3
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 2
+Number of calls for chromosome chr16 : 3
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr19 : 4
+Number of calls for chromosome chr21 : 1
+Number of calls for chromosome chr22 : 1
+Number of calls for chromosome chrX : 1
+[1] "Processing sample: 17364m 56/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99837
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 2
+Number of calls for chromosome chr6 : 1
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 3
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17365m 57/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99704
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 2
+Number of calls for chromosome chrX : 3
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17366m 58/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99815
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17367m 59/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99909
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr4 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr14 : 1
+[1] "Processing sample: 17368m 60/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99851
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chrX : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17369m 61/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99861
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 2
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17370m 62/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99891
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr4 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 3
+[1] "Processing sample: 17371m 63/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99838
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 2
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 3
+Number of calls for chromosome chr11 : 2
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 2
+Number of calls for chromosome chr17 : 2
+[1] "Processing sample: 17372m 64/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99645
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 2
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr22 : 1
+Number of calls for chromosome chrX : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17373m 65/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99919
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17374m 66/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9955
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chrX : 1
+[1] "Processing sample: 17375m 67/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99784
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17376m 68/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99894
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 2
+[1] "Processing sample: 17377m 69/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99891
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17378m 70/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9988
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17379m 71/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99916
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr6 : 2
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 2
+[1] "Processing sample: 17380m 72/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99823
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr22 : 1
+[1] "Processing sample: 17381m 73/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99444
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr13 : 1
+[1] "Processing sample: 17382m 74/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99815
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr12 : 2
+[1] "Processing sample: 17383m 75/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.95299
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr19 : 2
+[1] "Processing sample: 17384m 76/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9986
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17385m 77/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99804
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 3
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+[1] "Processing sample: 17386m 78/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99864
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr19 : 1
+[1] "Processing sample: 17387m 79/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99876
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17388m 80/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99843
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr11 : 2
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17389m 81/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99893
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr21 : 1
+[1] "Processing sample: 17390m 82/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99696
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 2
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 2
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr12 : 2
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 2
+Number of calls for chromosome chrX : 1
+Number of calls for chromosome chrY : 1
+[1] "Processing sample: 17391m 83/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99836
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 5
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr12 : 1
+[1] "Processing sample: 17392m 84/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99884
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 2
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+[1] "Processing sample: 17393m 85/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.9968
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr1 : 1
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr11 : 2
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr15 : 1
+[1] "Processing sample: 17394m 86/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.97947
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr3 : 2
+Number of calls for chromosome chr4 : 1
+Number of calls for chromosome chr5 : 3
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr9 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chrX : 1
+[1] "Processing sample: 17395m 87/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99837
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr12 : 2
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17396m 88/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99805
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 2
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 2
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 3
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+Number of calls for chromosome chr17 : 2
+Number of calls for chromosome chr21 : 1
+[1] "Processing sample: 17397m 89/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99879
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 2
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17398m 90/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99695
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr11 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr17 : 1
+Number of calls for chromosome chr20 : 1
+[1] "Processing sample: 17399m 91/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99835
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 1
+Number of calls for chromosome chr15 : 1
+Number of calls for chromosome chr16 : 1
+[1] "Processing sample: 17400m 92/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99685
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr6 : 2
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17401m 93/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99872
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 4
+Number of calls for chromosome chr12 : 1
+Number of calls for chromosome chr21 : 1
+[1] "Processing sample: 17402m 94/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99871
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr2 : 1
+Number of calls for chromosome chr6 : 1
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr8 : 1
+Number of calls for chromosome chr10 : 1
+Number of calls for chromosome chr13 : 2
+Number of calls for chromosome chr17 : 1
+[1] "Processing sample: 17403m 95/95"
+Optimization of the choice of aggregate reference set, this process can take some time
+Number of selected bins: 1570
+Now fitting the beta-binomial model on a data frame with 1774 rows : this step can take a few minutes.
+Now computing the likelihood for the different copy number states
+Correlation between reference and tests count is 0.99833
+To get meaningful result, this correlation should really be above 0.97. If this is not the case, consider the output of ExomeDepth as less reliable (i.e. most likely a high false positive rate)
+Number of calls for chromosome chr3 : 1
+Number of calls for chromosome chr5 : 1
+Number of calls for chromosome chr6 : 3
+Number of calls for chromosome chr7 : 1
+Number of calls for chromosome chr17 : 1
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "WARNING: more than 2 calls in PMS2, could affect plotting"
+[1] "WARNING: more than 2 calls in PMS2, could affect plotting"
+[1] "WARNING: more than 2 calls in PMS2, could affect plotting"
+[1] "WARNING: more than 2 calls in HLA-DRB9, could affect plotting"
+[1] "WARNING: more than 2 calls in HLA-DRB9, could affect plotting"
+[1] "WARNING: more than 2 calls in HLA-DRB9, could affect plotting"
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "END makeCNVCalls.R"
+[1] "makeCNVcalls.R finished"
+Saving CNV GenomicRanges and Failures results
+[1] "DECoN for DECoN_bedw_CHROM._valid-tab.csv dataset finished"
+
+
+
+Warning messages:
+1: In .Seqinfo.mergexy(x, y) :
+  Each of the 2 combined objects has sequence levels not in the other:
+  - in 'x': chr2, chr7, chr9, chr10, chr11, chr14, chr15, chr16, chr17, chr19, chr22
+  - in 'y': chr12, chrX, chrY
+  Make sure to always combine/compare objects based on the same reference
+  genome (use suppressWarnings() to suppress this warning).
+2: In .Seqinfo.mergexy(x, y) :
+  Each of the 2 combined objects has sequence levels not in the other:
+  - in 'x': chr1, chr3, chr9, chr11, chr14, chr16, chr17, chr19, chr22, chr12, chrX, chrY
+  - in 'y': chr5
+  Make sure to always combine/compare objects based on the same reference
+  genome (use suppressWarnings() to suppress this warning).
+3: In .Seqinfo.mergexy(x, y) :
+  Each of the 2 combined objects has sequence levels not in the other:
+  - in 'x': chr1, chr2, chr3, chr8, chr9, chr10, chr11, chr13, chr14, chr15, chr16, chr19, chr22, chr12, chrX, chrY, chr5
+  - in 'y': chr4
+  Make sure to always combine/compare objects based on the same reference
+  genome (use suppressWarnings() to suppress this warning).
+4: In .Seqinfo.mergexy(x, y) :
+  Each of the 2 combined objects has sequence levels not in the other:
+  - in 'x': chr14, chr15, chr12, chrY, chr5, chr4
+  - in 'y': chr21
+  Make sure to always combine/compare objects based on the same reference
+  genome (use suppressWarnings() to suppress this warning).
+5: In .Seqinfo.mergexy(x, y) :
+  Each of the 2 combined objects has sequence levels not in the other:
+  - in 'x': chr1, chr2, chr7, chr9, chr14, chr15, chr16, chr19, chr22, chr12, chrX, chrY, chr5, chr4, chr21
+  - in 'y': chr20
+  Make sure to always combine/compare objects based on the same reference
+  genome (use suppressWarnings() to suppress this warning).
+[1] "Finishing at 2020-10-13 08:24:19"
+
+Elapsed time:Time difference of 1.038848 hours
